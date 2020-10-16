@@ -1,0 +1,65 @@
+﻿@model List<WebApplication1.Models.contact>
+   <div class="container" style="max-width:1200px; height:auto;">
+           <div style="flex-direction: row; display: flex; justify-content: space-between;">
+               <label style="font-size:xx-large; font-weight:600; margin-top:10px;">Back End sent form contact</label>
+               <div style="margin-top: 30px;">
+                   <script>
+                       $(document).ready(function () {
+                           $("#myInput").on("keyup", function () {
+                               var value = $(this).val().toLowerCase();
+                               $("#myTable tr").filter(function () {
+                                   $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                               });
+                           });
+                       });
+                   </script>
+                   <input  id="myInput" type="text" placeholder="Search.." />
+                   <i style="margin-left: 2px;" class="glyphicon glyphicon-search"></i>
+               </div>
+           </div>
+           <table class="table table-bordered">
+               <thead>
+                   <tr style="background: cornflowerblue;">
+                       <th>FullName</th>
+                       <th>Email</th>
+                       <th>Subject</th>
+                       <th>Messege</th>
+                       <th>Action</th>
+                       <th>Event</th>
+                   </tr>
+               </thead>
+               <tbody id="myTable">
+                   @for (int i = 0; i < Model.Count(); i++)
+                   {
+                       <tr>
+                           <td>@Model[i].fullname</td>
+                           <td>@Model[i].email</td>
+                           <td style="color: #000;" contenteditable="true">@Model[i].subject</td>
+                           <td>@Model[i].messege
+                               <ul contenteditable="true">
+                                   <ol style="color:darkgray;">detail is data contact!</ol>
+                                   <ol style="color:darkgray;">Lorem slow dsids dfellw</ol>
+                               </ul>
+                           </td>
+                           <td>
+                               <a href="@Url.Action("Delete", new { id = Model[i].id })"><i class="glyphicon glyphicon-trash"></i></a>
+                               <a href="@Url.Action("Edit", new { id = Model[i].id })"><i class="glyphicon glyphicon-edit"></i></a>
+                               <script>
+                                   function SavedFunction() {
+                                       $.alert({
+                                           title: 'Alert!',
+                                           content: 'Simple alert!',
+                                       });
+                                   }
+                               </script>
+                           </td>
+                               <td style="display: flex;"><input type="text" />
+                                   <a style="margin-left:2px;" href="#">
+                                       <i onclick="SavedFunction()" class="glyphicon glyphicon-saved"></i>
+                                   </a>
+                               </td>
+                       </tr>
+                   }
+               </tbody>
+           </table>
+   </div>

@@ -1,0 +1,198 @@
+﻿@model WebApplication1.Models.contact
+
+@using (Html.BeginForm())
+{
+    <header>
+        <nav>
+            <div class="container">
+                <div class="nav-grid">
+                    <div class="logo">
+                        <h1>IntroNative</h1>
+                        <span>INT Ltd. Website Template</span>
+                    </div>
+                    <ul class="menu" id="myDIV">
+                        <li><a href="~/Home/index" class="btn active">Home</a></li>
+                        <li><a href="~/Home/showcontent" class="btn">ShowCon</a></li>
+                        <li><a href="#" class="btn">FullWidth</a></li>
+                        <li><a href="#" class="btn">Dropdown</a></li>
+                        <li><a href="#" class="btn">Prortfolio</a></li>
+                        <li><a href="#" class="btn">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end nav -->
+        <script>
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("myDIV");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    if (current.length > 0) {
+                        current[0].className = current[0].className.replace(" active", "");
+                    }
+                    this.className += " active";
+                });
+            }
+        </script>
+    </header>
+    <!-- end header -->
+
+    <section class="content">
+        <div class="container">
+            <div class="content-haeding">
+                <h1>
+                    A Massive <br>
+                    Title That Uses <br>
+                    Load Of Room.
+                </h1>
+            </div>
+            <!-- content-haeding -->
+
+            <div class="content-services">
+                <div class="content-services-grid">
+
+                    <div class="content-services-item">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <h2>Service Title</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                    </div>
+
+                    <div class="content-services-item">
+                        <i class="fa fa-bandcamp" aria-hidden="true"></i>
+                        <h2>Service Title</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                    </div>
+
+                    <div class="content-services-item">
+                        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                        <h2>Service Title</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                    </div>
+
+                    <div class="content-services-item">
+                        <i class="fa fa-telegram" aria-hidden="true"></i>
+                        <h2>Service Title</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- content-services  -->
+
+            <div class="content-meet">
+                <h1>Meet Our Team</h1>
+            </div>
+            <!-- content-meet -->
+
+            <div class="content-teams">
+                <div class="content-teams-grid">
+                    <div class="content-teams-item">
+                        <img src="https://via.placeholder.com/225/333333/fff.png" alt="">
+                        <h2>Your Name</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                        <div class="cr"><a href="#">View Profile >></a></div>
+                    </div>
+                    <div class="content-teams-item">
+                        <img src="https://via.placeholder.com/225/333333/fff.png" alt="">
+                        <h2>Your Name</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                        <div class="cr"><a href="#">View Profile >></a></div>
+                    </div>
+                    <div class="content-teams-item">
+                        <img src="https://via.placeholder.com/225/333333/fff.png" alt="">
+                        <h2>Your Name</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                        <div class="cr"><a href="#">View Profile >></a></div>
+                    </div>
+                    <div class="content-teams-item">
+                        <img src="https://via.placeholder.com/225/333333/fff.png" alt="">
+                        <h2>Your Name</h2>
+                        <p>Vestassapede et donec ut est libe ros sus et eget sed eget quisq ueta habitur augue</p>
+                        <div class="cr"><a href="#">View Profile >></a></div>
+                    </div>
+                </div>
+                <!-- content-teams-grid -->
+            </div>
+            <!-- content-teams -->
+        </div>
+        <!-- container -->
+    </section>
+    <!-- section content -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-item">
+                    <h3>From The Blog</h3>
+                    <h4>Post Title</h4>
+                    <span class="admin"><a href="#">Admin</a>, domainname.com</span><br>
+                    <span class="date">Friday, 6th April 2000</span><br>
+                    <p>
+                        Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nul
+                        la orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla.
+                    </p>
+                    <a href="#">Read More >></a>
+                </div>
+
+                <div class="footer-item">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">>> Lorem ipsum dolor sit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3>Latest Tweets</h3>
+                    <p>
+                        <a href="#">namehere</a>Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui
+                        laorem justo a non tellus laoremut vitae doloreet 1 day ago
+                    </p>
+                    <p>
+                        <a href="#">namehere</a>Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui
+                        laorem justo a non tellus laoremut vitae doloreet 1 day ago
+                    </p>
+                </div>
+                <div class="footer-item">
+                    <h3>Contact Us</h3>
+                    <form id="myForm" action="">
+                        <input type="text" name="fullname" placeholder="Full name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="messege" placeholder="Message"></textarea>
+                        <input type="submit" value="sumbit">
+                    </form>
+                    <script>
+                        //Onclick alert Contact
+                        $(document).ready(function () {
+                            $("form").submit(function () {
+                                alert("Thank you for Contact!!!");
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- container -->
+    </footer>
+    <!-- footer -->
+    <div class="copyright">
+        <div class="container">
+            <div class="copyright-grid">
+                <div class="copytext">
+                    <p>Copyright © 2020 www.Intronative.com - All Rights Reserved</p>
+                </div>
+                <div class="credits">
+                    <p>Template by Mikeberry Templates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
